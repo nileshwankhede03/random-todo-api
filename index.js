@@ -7,7 +7,7 @@ app.use(cors()); // <== Enable CORS for all origins
 app.use(express.json()); // Parses JSON body
 
 // Sample TODOs
-const todos = [
+const todos = [{
   { id: 1, title: "Buy groceries", description : "this is a desc of Buy groceries", completed: false },
   { id: 2, title: "Walk the dog", description : "this is a desc of Walk the dog", completed: true },
   { id: 3, title: "Read a book", description : "this is a desc of Read a book", completed: false },
@@ -24,7 +24,7 @@ const todos = [
   { id: 14, title: "Study DBMS with SQL", description : "explore the concepts of a DBMS", completed: false },
   { id: 15, title: "Rivision of WEB-dev", description : "learn React.js", completed: false },
   { id: 16, title: "So ja mere bhai",description : "this is a desc of sleeping1",  completed: false },
-];
+}];
 
 // Utility to get random TODO
 function getRandomTodo() {
