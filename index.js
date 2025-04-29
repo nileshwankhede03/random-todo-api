@@ -36,7 +36,7 @@ function getRandomTodo() {
 }
 
 // Route to return a random todo
-app.get('/', (req, res) => {
+app.get('/todos', (req, res) => {
   const randomTodo = getRandomTodo();
   res.json(randomTodo);
 });
