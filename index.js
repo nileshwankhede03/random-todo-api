@@ -3,10 +3,9 @@ const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(cors()); // <== Enable CORS for all origins
-app.use(express.json()); // Parses JSON body
+app.use(cors());
+app.use(express.json());
 
-// Sample TODOs
 const data = {
   todos: [
     { id: 1, title: "Buy groceries", description: "this is a desc of Buy groceries" },
@@ -28,14 +27,10 @@ const data = {
   ]
 };
 
-
-
-// Utility to get random TODO
 function getRandomTodo() {
-  return todos[Math.floor(Math.random() * todos.length)];
+  return data.todos[Math.floor(Math.random() * data.todos.length)];
 }
 
-// Route to return a random todo
 app.get('/todos', (req, res) => {
   const randomTodo = getRandomTodo();
   res.json(randomTodo);
